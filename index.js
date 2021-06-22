@@ -9,7 +9,7 @@ const details = require('./details.json');
 
 const app = express();
 app.use(cors({origin:"*"}));
-app.use(bodyparser.json());
+app.use(bodyparser.json()); 
 
 app.use(express.static('Murti'));
 const port = 3000;

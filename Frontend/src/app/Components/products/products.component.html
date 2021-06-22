@@ -1,0 +1,33 @@
+
+<div class="container mt-5">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterTerm">
+    </div>
+  </div>
+  <app-loading *ngIf="loading"></app-loading>
+<div fxLayout="row wrap" class=" pt-5 pb-5 p-3"  fxLayout.xs="column" fxLayoutAlign="center "  *ngIf="!loading">
+    <mat-card  
+              *ngFor="let product of products | filter:filterTerm | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize"
+              fxLayout="column" 
+              class="p-2 m-2" 
+              fxFlex="18%" 
+              fxFlex.md = "30%"
+              fxFlex.sm="40%"
+              (click) = "show()"
+    >
+        <div class="p=0 m-0 " fxFlex="80%"  >
+            <img [src]="product.url" alt=""   id="imageresource"  usemap="#m1">  
+            <div class="text p-3 fs-5" fxLayoutAlign="center center">{{product.name}}</div>
+            <div class="centered   " fxLayout="row"  >
+                <span class="tag fs-4 p-2" fxLayoutAlign="center center"> Star Trading Company</span>
+            </div>
+        </div>
+        
+    </mat-card>        
+</div>
+<div fxLayout="row" fxLayoutAlign="center center " class="p-5">
+    <ngb-pagination [collectionSize]="products.length" [(page)]="page" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
+</div>
+
+
+<!-- <router-outlet></router-outlet> -->

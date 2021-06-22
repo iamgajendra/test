@@ -1,0 +1,22 @@
+<app-loading *ngIf="loading"></app-loading>
+<div fxLayout="row wrap" class=" pl-0 pr-0" 
+        fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="23px" *ngIf="!loading">
+    <mat-card [dataSource]="dataSource" 
+              *ngFor="let product of fileUpload | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize"
+              class="p-3 m-3"  
+              fxFlex="20%" 
+              fxFlex.sm="40%"
+              (click)="show()"
+    >
+        <div class=" p-0 m-0 " fxFlex="100%" >
+            <img [src]="product.url" alt="" >
+            <div class="centered   " fxLayout="row"  >
+                <span class="text fs-3 p-2" fxLayoutAlign="center center"> Star Trading Company</span>
+             </div>
+        </div>  
+    </mat-card>          
+</div>
+<div fxLayout="row" fxLayoutAlign="center center " class="p-5">
+    <ngb-pagination [collectionSize]="fileUpload.length" [(page)]="page" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
+</div>
+

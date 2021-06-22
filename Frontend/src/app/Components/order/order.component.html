@@ -1,0 +1,141 @@
+<div class="p-2 pt-3">
+   <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutGap="10px" class="fs-2 p-5">
+     <mat-card fxFlex="30%" fxFlex.xs="100%" fxLayoutAlign="center center" fxLayout="row" class="w-100">
+         <div fxLayoutAlign="center center" class="p-3">
+            <button mat-fab class="button" >
+                <mat-icon >local_shipping</mat-icon>
+              </button>
+         </div>
+         <br>
+         <div class="p-3">
+            Timely Delivery
+         </div>
+     </mat-card>
+    <mat-card fxFlex="30%"fxFlex.xs="100%" fxLayoutAlign="center center" fxLayout="row" class="w-100">
+            <div fxLayoutAlign="center center" class="p-3">
+               <button mat-fab class="button" >
+                   <mat-icon >done_outline</mat-icon>
+                 </button>
+            </div>
+            <br>
+            <div class="p-3">
+              Best Quality
+            </div>
+    </mat-card>
+    <mat-card fxFlex="30%" fxFlex.xs="100%" fxLayoutAlign="center center" fxLayout="row" class="w-100">
+            <div fxLayoutAlign="center center" class="p-3">
+               <button mat-fab class="button" >
+                   <mat-icon >attach_money</mat-icon>
+                 </button>
+            </div>
+            <br>
+            <div class="p-3">
+               Best Price
+            </div>
+    </mat-card>
+   </div>
+   <mat-divider></mat-divider>
+   <div class="p-3 w-100" fxLayout ="row" fxLayout.md="column" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="space-between">
+       <div fxFlex="45%" class="p-5" fxFlex.xs="100%">
+            <form #orderForm = "ngForm">
+                <mat-form-field class="w-100">
+                    <mat-label>First Name</mat-label>
+                    <input matInput ngModel
+                            name="firstName"
+                            firstName required
+                    >
+                    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                </mat-form-field>
+                <mat-form-field class="w-100">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput 
+                        ngModel
+                        name="lastName"
+                        lastName required
+                    >
+                    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                </mat-form-field>
+                <mat-form-field class="w-100">
+                    <mat-label>Email Address</mat-label>
+                    <input  matInput 
+                            ngModel
+                            placeholder="pat@example.com"  
+                            name="email"
+                            email
+                            required>
+                    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                </mat-form-field>
+                <mat-form-field class="w-100">
+                    <mat-label>Mobile Number</mat-label>
+                    <input  matInput 
+                            ngModel
+                            type="number"
+                            placeholder=""  
+                            name="number"
+                            number
+                            required>
+                    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                </mat-form-field>
+                <mat-form-field class="w-100">
+                    <mat-label>Your Order</mat-label>
+                    <textarea matInput ngModel name="order" order required></textarea>
+                </mat-form-field>
+                <mat-form-field class="w-100" >
+                    <mat-label>Proposal Money</mat-label>
+                    <input  matInput 
+                            ngModel
+                            type="number"
+                            placeholder=""  
+                            name="money"
+                            money
+                            required>
+                    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                </mat-form-field>
+                <div>
+                    <button class="submit" 
+                            mat-raised-button 
+                            type="submit" 
+                            [disabled]="!orderForm.valid"
+                            (click)="placeOrder(orderForm)"
+                    >{{buttontext}}</button>
+                </div>
+            </form>
+            <div  fxLayoutAlign="center center" class="p-2"><h2>{{ThankuMessage}}</h2></div>
+       </div>
+       <div fxFlex="45%" fxLayout="column" fxLayoutAlign="center ">       
+            <div fxLayoutAlign="center ">
+                <h1 class="fs-1">Contact Directly</h1>
+            </div >
+            <mat-divider></mat-divider>
+            <br>
+            <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px" fxLayoutAlign="center center">
+                <div fxFlex="30%" fxFlex.xs="100%">
+                    <button mat-raised-button 
+                            color="primary" 
+                            class="whatsapp   
+                            fs-4"
+                            (click)="whatapp()"
+                    ><i class="fa fa-whatsapp my-float p-1 link link-four pulse-grow-on-hover"></i>WhatsApp</button>
+                    <!-- <a target="_blank" href="https://api.whatsapp.com/send?phone=916350639063&text=Hi%20we%20need%20help%20regarding%20something">Send message to WhatsApp</a> -->
+                </div>
+                <div fxFlex="30%" fxFlex.xs="100%">
+                    <button mat-raised-button 
+                             color="primary" 
+                             class="phone fs-4 "
+                             (click)="phone()"
+                    ><mat-icon class="m-1 link link-four pulse-grow-on-hover">phone</mat-icon>Make Call</button>
+                </div>
+                <div fxFlex="30%" fxFlex.xs="100%">
+                    <button mat-raised-button 
+                            color="primary" 
+                            class="mail fs-4 "
+                            (click)="mail()"
+                    ><mat-icon class="m-1 link link-four pulse-grow-on-hover">email</mat-icon>Send Mail</button>
+                </div>    
+            </div>
+           
+       </div>
+   
+   </div>
+   
+</div>

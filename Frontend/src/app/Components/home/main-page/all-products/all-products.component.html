@@ -1,0 +1,24 @@
+<div class=" p-3 pb-0">
+    <div fxLayout="column" class=" p-0 product_background"  >
+        <div fxLayout="row " fxLayoutAlign="space-between center">
+            <div class="fs-2 fw-800 text-white p-4 pl-5">Products Category</div>
+        </div>
+        <div fxLayout="row wrap" class=" pt-3"  fxLayout.xs="column" fxLayoutAlign="center ">
+            <mat-card *ngFor="let category of categories,let i = index" fxLayout="column" class="p-3 m-3" fxFlex="25%" fxFlex.sm="45%">
+                <div class="p=0 m-0 " fxFlex="75%" fxFlex.xs="90%"> 
+                  <img [src]="category.img" alt="">
+                </div>
+                <div class="p-1 pt-4 fs-4 fw-bold text-muted" fxLayoutAlign="center center">
+                    {{category.type}} 
+                </div>
+                <div class=" pt-1  " fxLayoutAlign="center center">
+                    <button mat-stroked-button class="text fs-6 w-100 p-2 fw-normal" (click)="getImages(i)" fxLayoutAlign="center center">View All Product</button>
+                </div>
+            </mat-card>
+        </div>
+        
+    </div>
+</div>
+
+<hr>
+

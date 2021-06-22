@@ -1,0 +1,91 @@
+$blue : #283593;
+$orange:#f44336;
+.title{
+    text-decoration: 5px underline $orange;
+}
+.product_background{
+    display: flex;
+    background-image: url(../../../../../assets/background.png);
+    background-repeat: no-repeat;
+    border-radius: 10px 10px 10px 10px;
+    
+}
+a{
+    text-decoration: none;
+}
+// mat-card{
+//   height: 500px;
+//     cursor: pointer;
+
+//    width: 100%;
+//     // max-width: 340px !important;
+//     cursor: pointer;
+//     border-radius: 10px 10px 10px 10px;
+//     box-shadow: 0px 0px 0px;
+    
+// }
+mat-card{
+  height: 450px;
+  cursor: pointer;
+}
+.mat-raised-button:not([class*=mat-elevation-z]) {
+  box-shadow: none !important;
+}
+button{
+  height: 40px;
+}
+mat-card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .price{
+        color: $orange;
+        font-weight: 600;
+        
+    }
+    button{
+        background-color:$orange ;
+        color: white;
+    }
+  }
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+  
+  mat-card:hover img {
+    opacity: 0.9;
+    
+  }
+  
+  mat-card:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: white;
+    color: $blue;
+    font-size: 160%;
+    font-weight: 600;
+    padding: 15px 10px;
+    border-radius: 10px 10px 10px 10px;
+  }
+  @media only screen and (max-width: 800px) {
+    .text {
+        font-size: 100%;
+    }
+
+  }
+

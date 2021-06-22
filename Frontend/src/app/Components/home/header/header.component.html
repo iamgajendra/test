@@ -1,0 +1,63 @@
+<div >
+    <mat-toolbar color="primary" >
+        <mat-toolbar-row class="toolbar-one " fxShow="true" fxHide.lt-sm="true">
+          <span class="fs-2 p-5">Star Trading Company</span>
+          <span class="example-spacer"></span>
+        </mat-toolbar-row>
+        <mat-toolbar-row class="toolbar-two" >
+            <div fxShow="true" fxHide.gt-sm="true" fxLayoutAlign="space-between center" class="w-100">
+                <div><span class="fs-5">Star Trading Company</span></div>
+                <div >
+                    <button mat-icon-button [matMenuTriggerFor]="dropMenu"  fxLayoutAlign="end">
+                        <mat-icon >menu</mat-icon>
+                    </button>
+                    <mat-menu #dropMenu="matMenu">
+                            <button mat-menu-item routerLink="/"[routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active1">
+                                <mat-icon class="mr">home</mat-icon>
+                                Home
+                            </button>
+                            <mat-divider></mat-divider>
+                            <button mat-menu-item routerLink="about" routerLinkActive="active1">
+                                <mat-icon class="mr">info</mat-icon>
+                                About Us
+                            </button>
+                            <mat-divider></mat-divider>
+                            <button mat-menu-item routerLinkActive="active1" routerLink="products">
+                                <mat-icon class="mr">category</mat-icon>
+                                Products
+                            </button>
+                            <mat-divider></mat-divider>
+                            <button mat-menu-item routerLinkActive="active1" routerLink="contact">
+                                <mat-icon class="mr">contact_page</mat-icon>
+                                Contact Us
+                            </button>
+                            <mat-divider></mat-divider>
+                            <button mat-menu-item routerLinkActive="active1" routerLink="order-from-star-trading-company">
+                                <mat-icon class="mr">note_alt</mat-icon>
+                                Order
+                            </button>
+                    </mat-menu>
+                </div> 
+            </div >
+            <div fxShow="true" fxHide.lt-md="true">
+                    <ul>
+                        <li [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active">
+                            <a routerLink="/">Home</a>
+                        </li>
+                        <li routerLinkActive="active">
+                        <a routerLink="about">About Us</a>
+                        </li>
+                        <li routerLinkActive="active">
+                            <a routerLink="products">Products</a>
+                        </li>
+                        <li routerLinkActive="active">
+                            <a routerLink="contact">Contact Us</a>
+                        </li>
+                        <li routerLinkActive="active">
+                            <a routerLink="order-from-star-trading-company">Order</a>
+                        </li>
+                    </ul>
+            </div>   
+        </mat-toolbar-row>       
+    </mat-toolbar>
+</div>

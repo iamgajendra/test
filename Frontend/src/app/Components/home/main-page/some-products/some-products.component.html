@@ -1,0 +1,18 @@
+<div fxLayout="column " class=" pt-0">
+    <div  class="heading fs-2  " fxFlex="54px" fxLayoutAlign="center center">
+        <span >Top Products</span>
+    </div>
+    <div fxLayout="row wrap" class="p-3 pt-3"  fxLayout.xs="column" fxLayoutAlign="center ">
+        <mat-card *ngFor="let product of products" fxLayout="column" class="p-3 m-3" fxFlex="20%" fxFlex.sm="40%">
+            <div class="p=0 m-0 " fxFlex="90%">
+              <img [src]="product.img" alt="">
+            </div>
+            <div class="p-3 pb-1 fs-4 fw-bold price">
+                {{product.name}} 
+            </div>
+        </mat-card>
+    </div>
+    <div class="p-5 pt-1  fs-6 ">
+        <button mat-stroked-button class="text fw-800 w-100 p-2" routerLink="products">View All Product</button>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+<div fxLayout="row" class="p-5" fxLayout.sm="column" fxLayout.xs="column" fxLayoutGap="24px" fxLayoutAlign="space-between ">
+    <div fxFlex="40" fxLayout="column">
+      <div class="fs-1 p-3">
+          Contact Info
+      </div>
+      <div class="fs-5 text-muted lh-base p-3">
+        If you have any problems,suggestions and feedback then please feel free to contact with us. Choose our communication soruces. We will love to hear from you.
+       </div>
+       <div class="fs-3 p-3">
+          Call
+          <div class="fs-6 text-muted lh-1 pt-4">
+            +(91)9351649868,+(91)9829868726
+          </div>
+        </div>
+        <div class="fs-3 p-3">
+            Email Address
+            <div class="fs-6 text-muted lh-1 pt-4">
+                startradingdwarka@gmail.com
+            </div>
+        </div>
+        <div class="fs-3 p-3">
+            Address
+            <div class="fs-6 text-muted lh-1 pt-4">
+                H.O : Opp. Todhniwal Dharamshala Station Road, Makrana (Raj.) 341505
+            </div>
+            <div class="fs-6 text-muted lh-1 pt-2">
+                B.O : 1282,Khejron Ka Rasta Chandpole Bazar, Jaipur( Raj.) 302001
+            </div>
+        </div>
+    </div>
+    <div fxFlex="50" fxLayout="column">
+        <div class="fs-1 p-3 pl-5">
+            Write to Us
+        </div>
+        <div class="p-3">
+            <!-- form -->
+           <form #contactForm = "ngForm">
+                <mat-form-field class="w-100">
+                    <mat-label>First Name</mat-label>
+                    <input matInput ngModel
+                               name="firstName"
+                               firstName required
+                    >
+                    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                </mat-form-field>
+                <mat-form-field class="w-100">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput 
+                           ngModel
+                           name="lastName"
+                           lastName 
+                    >
+                    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                </mat-form-field>
+                <mat-form-field class="w-100">
+                    <mat-label>Enter your email</mat-label>
+                    <input  matInput 
+                            ngModel
+                            placeholder="pat@example.com"  
+                            name="email"
+                            email
+                            required>
+                    <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+                </mat-form-field>
+                <mat-form-field class="w-100">
+                    <mat-label>Your Message</mat-label>
+                    <textarea matInput ngModel name="message" message></textarea>
+                </mat-form-field>
+                <div>
+                    <button mat-raised-button 
+                            type="submit" 
+                            [disabled]="!contactForm.valid"
+                            (click)="sendMessage(contactForm)"
+                    >{{buttonText}}</button>
+                </div>
+           </form>
+        </div>
+    </div>
+</div>

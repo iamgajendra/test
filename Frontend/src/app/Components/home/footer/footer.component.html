@@ -1,0 +1,92 @@
+<div class="footer   p-2 " >
+    <div fxLayout="row" fxLayoutAlign="space-between center "  fxLayout.xs="column" class="contact " >
+        <div class="fs-4  hover  text-white"  >Get in Touch</div> 
+        <br>
+        <div fxLayout="row" fxLayoutAlign="space-between" fxLayoutGap="20px">
+              <div >
+                <img src="../../../../assets/whatsapp.png" alt=""  
+                     class="link buzz-out-on-hover" 
+                     (click)="whatsapp()"
+                >
+              </div>
+              <div >
+                  <img src="../../../../assets/phone.png" alt=""  
+                       class="link buzz-out-on-hover"
+                       (click)="phone()"
+                    >
+              </div>
+              <div >
+                  <img src="../../../../assets/rename.png" alt=""  
+                       class="link buzz-out-on-hover"
+                       (click)="mail()">
+              </div>
+              <div >
+                <img src="../../../../assets/in.png" alt=""  class="link buzz-out-on-hover">
+               </div>
+               <div >
+                <img src="../../../../assets/facebook.png" alt=""  class="link buzz-out-on-hover">
+               </div>
+        </div>
+        
+    </div>
+    <hr class="p-0 m-0">
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayout.xs="column" >
+         <div class="footer p-5" >
+            <div class=" contain w-100" fxLayout="row" fxLayout.xs="column" fxLayout.sm="col" fxLayoutAlign="center " >
+                    <div class="cols p-3 w-100 " fxFlex="10%" fxFlex.xs="50%" >
+                        <div fxLayoutAlign="center">
+                            <h1>Company</h1>
+                        </div>
+                        <div fxLayoutAlign="center" >
+                            <ul>
+                                <li routerLink="/">Home</li>
+                                <li routerLink="/about">About US</li>
+                                <li routerLink="/products">All Products</li>
+                                <li routerLink="/order-from-star-trading-company">Order</li>
+                                <li routerLink="/contact">Contact Us</li>
+                            </ul>
+                        </div>
+                    </div> 
+                    <div class="cols p-3  col w-100" fxFlex="30%" fxFlex.xs="50%">
+                        <div fxLayoutAlign="center">
+                            <h1>Location</h1>
+                        </div>
+                        <div fxLayoutAlign="center">
+                            <ul >
+                                <li>
+                                    <mat-icon class="icon">location_on</mat-icon>
+                                        <span class="products">H.O : Opp. Todhniwal Dharamshala Station Road, Makrana (Raj.) 341505</span>
+                                    
+                                </li>
+                                <li>
+                                    <div  ><mat-icon>location_on</mat-icon>
+                                        <span class="products">B.O : 1282,Khejron Ka Rasta  Chandpole Bazar, Jaipur( Raj.) 302001</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>    
+                    </div>
+                    <div class="cols p-3  w-100 " fxFlex="50%" fxFlex.xs="100%" >
+                        <div fxLayoutAlign="center">
+                            <h1>All Products</h1>
+                        </div>
+                        <div fxLayoutAlign="center">
+                            <div class="row">
+                                <div class="col-3 products p-1" *ngFor="let item of allProducts">{{item}} .</div>
+                            </div>
+                        </div>        
+                      </div>
+          <div class="clearfix"></div>
+          </div>
+          </div>
+    </div>
+    <hr>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="p-2" fxLayout.xs="column">
+        <div  >
+            <h1 class="fs-3">Star Trading Company</h1>
+        </div>
+        <div>
+            <h5 class="text-muted">© All Rights Reversed | Made by SHEETAL DADHICH for better Web</h5>
+        </div>
+    </div>
+</div>

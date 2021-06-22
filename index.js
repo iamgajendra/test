@@ -12,12 +12,11 @@ app.use(cors({origin:"*"}));
 app.use(bodyparser.json());
 
 app.use(express.static('Murti'));
-const hostname = "localhost";
 const port = 3000;
 
 const server = http.createServer(app);
 
-server.listen(port,hostname,()=>{
+server.listen(port,()=>{
     console.log("The server started at port 3000!!!");
 });
 

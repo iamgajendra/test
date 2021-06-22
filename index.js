@@ -12,7 +12,7 @@ app.use(cors({origin:"*"}));
 app.use(bodyparser.json()); 
 
 app.use(express.static('Murti'));
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const server = http.createServer(app);
 
